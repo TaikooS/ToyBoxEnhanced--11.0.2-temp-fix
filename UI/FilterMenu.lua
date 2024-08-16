@@ -249,9 +249,17 @@ local function SetupEffectMenu(root)
             for subeffect, effectIds in pairs(ADDON.db.effect[effect]) do
                 table.insert(sortedSubEffects, subeffect)
             end
-            table.sort(sortedSubEffects, function(a, b)
-                return (L[a] or a) < (L[b] or b)
-            end)
+            table.sort(sortedEffects, function(a, b)
+			local valA = L[a] or a
+			local valB = L[b] or b
+    
+			-- 確保 valA 和 valB 是字符串
+			if type(valA) == "table" or type(valB) == "table" then
+				return false  -- 或者根據需求進行其他處理
+			end
+
+			return valA < valB
+		end)  -- 關閉 function
             for _, subfamily in pairs(sortedSubEffects) do
                 CreateFilter(subMenu, L[subfamily] or subfamily, subfamily, settings[effect], settings)
             end
