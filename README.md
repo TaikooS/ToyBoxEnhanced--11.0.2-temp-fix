@@ -1,3 +1,7 @@
+# Temporary Fix Version Notice
+**Note:** This repository contains a temporary fix for the [Toy Box Enhanced](https://www.curseforge.com/wow/addons/toy-box-enhanced). This fix addresses recent errors caused by API changes, but please be aware that it was completed with the help of AI and may not be the most optimal solution. If you are looking for a stable and long-term supported version, please keep an eye on updates from the original author.
+
+
 # Toy Box Enhanced
 This addon extends the ingame toy box with some cool stuff.
 
